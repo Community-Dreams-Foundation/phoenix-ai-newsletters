@@ -845,24 +845,36 @@
 
                 <form
                     class="subscribe-form"
-                    action="PASTE-YOUR-SUBSCRIPTION-FORM-URL-HERE"
+                    action="https://assets.mailerlite.com/jsonp/2562673/forms/195164877065553192/subscribe"
                     method="post"
                     target="_blank"
                 >
-
+                
                     <input
                         type="email"
-                        name="EMAIL"
+                        name="fields[email]"
                         placeholder="Enter your email address"
                         aria-label="Email address"
                         autocomplete="email"
                         required
                     >
-
+                
+                    <input
+                        type="hidden"
+                        name="ml-submit"
+                        value="1"
+                    >
+                
+                    <input
+                        type="hidden"
+                        name="anticsrf"
+                        value="true"
+                    >
+                
                     <button type="submit">
                         Subscribe
                     </button>
-
+                
                 </form>
 
                 <p class="subscribe-note">
