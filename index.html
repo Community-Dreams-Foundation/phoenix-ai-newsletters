@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
 
     <meta
@@ -16,6 +17,7 @@
         content="Phoenix AI provides accessible educational newsletters about biomarkers, laboratory results, nutrition, and preventive health."
     >
 
+
     <style>
 
         :root {
@@ -29,112 +31,198 @@
             --border: #dfe9eb;
         }
 
+
         * {
             box-sizing: border-box;
         }
+
 
         html {
             scroll-behavior: smooth;
         }
 
+
         body {
             margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
             background: var(--background);
+
             color: var(--text-dark);
         }
+
 
         a {
             color: inherit;
         }
 
 
+
         /* =========================
            NAVIGATION
         ========================= */
 
+
         .navbar {
+
             position: sticky;
+
             top: 0;
+
             z-index: 1000;
-            background: rgba(255, 255, 255, 0.96);
-            border-bottom: 1px solid var(--border);
-            backdrop-filter: blur(10px);
+
+            background:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.96
+                );
+
+            border-bottom:
+                1px solid
+                var(--border);
+
+            backdrop-filter:
+                blur(10px);
         }
 
+
         .navbar-inner {
+
             width: 92%;
+
             max-width: 1150px;
+
             min-height: 76px;
+
             margin: auto;
+
             display: flex;
+
             align-items: center;
-            justify-content: space-between;
+
+            justify-content:
+                space-between;
+
             gap: 24px;
         }
 
+
         .brand {
+
             display: flex;
+
             align-items: center;
+
             gap: 12px;
+
             text-decoration: none;
         }
 
+
         .brand-logo {
+
             width: 48px;
+
             height: 48px;
+
             object-fit: contain;
         }
 
+
         .brand-text {
+
             display: flex;
+
             flex-direction: column;
         }
 
+
         .brand-name {
-            color: var(--primary-dark);
+
+            color:
+                var(--primary-dark);
+
             font-size: 1.08rem;
+
             font-weight: 800;
         }
 
+
         .brand-subtitle {
+
             margin-top: 3px;
-            color: var(--text-medium);
+
+            color:
+                var(--text-medium);
+
             font-size: 0.78rem;
         }
 
+
         .nav-links {
+
             display: flex;
+
             align-items: center;
+
             gap: 22px;
         }
 
+
         .nav-links a {
-            color: var(--text-medium);
+
+            color:
+                var(--text-medium);
+
             text-decoration: none;
+
             font-size: 0.95rem;
+
             font-weight: 700;
         }
 
+
         .nav-links a:hover {
-            color: var(--primary);
+
+            color:
+                var(--primary);
         }
+
 
 
         /* =========================
            HERO
         ========================= */
 
+
         .hero {
-            padding: 95px 24px;
+
+            padding:
+                95px
+                24px;
+
             color: white;
 
             background:
+
                 radial-gradient(
-                    circle at top right,
-                    rgba(255, 255, 255, 0.18),
+                    circle
+                    at top right,
+                    rgba(
+                        255,
+                        255,
+                        255,
+                        0.18
+                    ),
                     transparent 35%
                 ),
+
                 linear-gradient(
                     135deg,
                     var(--primary-dark),
@@ -143,162 +231,330 @@
                 );
         }
 
+
         .hero-content {
+
             width: 92%;
+
             max-width: 1000px;
+
             margin: auto;
+
             text-align: center;
         }
 
+
         .hero-badge {
-            display: inline-block;
+
+            display:
+                inline-block;
+
             margin-bottom: 22px;
-            padding: 8px 14px;
 
-            border: 1px solid rgba(255, 255, 255, 0.35);
-            border-radius: 999px;
+            padding:
+                8px
+                14px;
 
-            background: rgba(255, 255, 255, 0.13);
+            border:
+                1px solid
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.35
+                );
 
-            font-size: 0.85rem;
-            font-weight: 700;
+            border-radius:
+                999px;
+
+            background:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.13
+                );
+
+            font-size:
+                0.85rem;
+
+            font-weight:
+                700;
         }
+
 
         .hero h1 {
+
             margin: 0;
-            font-size: clamp(2.5rem, 6vw, 4.8rem);
-            line-height: 1.08;
+
+            font-size:
+                clamp(
+                    2.5rem,
+                    6vw,
+                    4.8rem
+                );
+
+            line-height:
+                1.08;
         }
+
 
         .hero p {
-            max-width: 720px;
-            margin: 22px auto 0;
 
-            color: rgba(255, 255, 255, 0.92);
+            max-width:
+                720px;
 
-            font-size: 1.15rem;
-            line-height: 1.75;
+            margin:
+                22px
+                auto
+                0;
+
+            color:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.92
+                );
+
+            font-size:
+                1.15rem;
+
+            line-height:
+                1.75;
         }
+
 
         .hero-button {
-            display: inline-block;
 
-            margin-top: 30px;
-            padding: 14px 22px;
+            display:
+                inline-block;
 
-            border-radius: 10px;
+            margin-top:
+                30px;
 
-            background: white;
-            color: var(--primary-dark);
+            padding:
+                14px
+                22px;
 
-            text-decoration: none;
-            font-weight: 800;
+            border-radius:
+                10px;
+
+            background:
+                white;
+
+            color:
+                var(--primary-dark);
+
+            text-decoration:
+                none;
+
+            font-weight:
+                800;
 
             transition:
-                transform 0.2s ease,
-                box-shadow 0.2s ease;
+                transform
+                0.2s ease,
+                box-shadow
+                0.2s ease;
         }
+
 
         .hero-button:hover {
-            transform: translateY(-2px);
+
+            transform:
+                translateY(-2px);
 
             box-shadow:
-                0 10px 24px rgba(0, 0, 0, 0.16);
+                0
+                10px
+                24px
+                rgba(
+                    0,
+                    0,
+                    0,
+                    0.16
+                );
         }
+
 
 
         /* =========================
            MAIN
         ========================= */
 
+
         main {
+
             width: 92%;
+
             max-width: 1150px;
-            margin: 65px auto;
+
+            margin:
+                65px
+                auto;
         }
+
 
         .section-header {
-            margin-bottom: 30px;
+
+            margin-bottom:
+                30px;
         }
+
 
         .section-kicker {
-            margin-bottom: 9px;
 
-            color: var(--primary);
+            margin-bottom:
+                9px;
 
-            font-size: 0.8rem;
-            font-weight: 800;
+            color:
+                var(--primary);
 
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
+            font-size:
+                0.8rem;
+
+            font-weight:
+                800;
+
+            text-transform:
+                uppercase;
+
+            letter-spacing:
+                0.08em;
         }
+
 
         .section-header h2 {
+
             margin: 0;
 
-            color: var(--text-dark);
+            color:
+                var(--text-dark);
 
-            font-size: clamp(1.9rem, 4vw, 2.7rem);
+            font-size:
+                clamp(
+                    1.9rem,
+                    4vw,
+                    2.7rem
+                );
         }
+
 
         .section-header p {
-            max-width: 700px;
 
-            margin: 12px 0 0;
+            max-width:
+                700px;
 
-            color: var(--text-medium);
+            margin:
+                12px
+                0
+                0;
 
-            line-height: 1.7;
+            color:
+                var(--text-medium);
+
+            line-height:
+                1.7;
         }
+
 
 
         /* =========================
-           NEWSLETTER CARDS
+           NEWSLETTER GRID
         ========================= */
 
+
         .newsletter-grid {
-            display: grid;
+
+            display:
+                grid;
 
             grid-template-columns:
-                repeat(auto-fit, minmax(290px, 1fr));
+                repeat(
+                    auto-fit,
+                    minmax(
+                        290px,
+                        1fr
+                    )
+                );
 
-            gap: 28px;
+            gap:
+                28px;
         }
+
 
         .newsletter-card {
-            overflow: hidden;
 
-            border: 1px solid var(--border);
-            border-radius: 20px;
+            overflow:
+                hidden;
 
-            background: var(--surface);
+            border:
+                1px solid
+                var(--border);
+
+            border-radius:
+                20px;
+
+            background:
+                var(--surface);
 
             box-shadow:
-                0 10px 30px rgba(27, 69, 80, 0.08);
+                0
+                10px
+                30px
+                rgba(
+                    27,
+                    69,
+                    80,
+                    0.08
+                );
 
             transition:
-                transform 0.25s ease,
-                box-shadow 0.25s ease;
+                transform
+                0.25s ease,
+                box-shadow
+                0.25s ease;
         }
+
 
         .newsletter-card:hover {
-            transform: translateY(-6px);
+
+            transform:
+                translateY(-6px);
 
             box-shadow:
-                0 18px 42px rgba(27, 69, 80, 0.14);
+                0
+                18px
+                42px
+                rgba(
+                    27,
+                    69,
+                    80,
+                    0.14
+                );
         }
 
+
         .placeholder-image {
-            position: relative;
 
-            display: flex;
+            position:
+                relative;
 
-            height: 260px;
+            display:
+                flex;
 
-            align-items: center;
-            justify-content: center;
+            height:
+                260px;
 
-            overflow: hidden;
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            overflow:
+                hidden;
 
             background:
                 linear-gradient(
@@ -307,163 +563,289 @@
                     #edf3f5
                 );
 
-            font-size: 4.5rem;
+            font-size:
+                4.5rem;
         }
+
 
 
         /* Vitamin D + HbA1c */
 
+
         .vitamin-d-cover,
         .hba1c-cover {
-            flex-direction: column;
-            gap: 12px;
+
+            flex-direction:
+                column;
+
+            gap:
+                12px;
         }
+
 
         .vitamin-d-cover::before,
         .hba1c-cover::before {
-            content: "";
 
-            position: absolute;
+            content:
+                "";
 
-            width: 165px;
-            height: 165px;
+            position:
+                absolute;
 
-            border-radius: 50%;
+            width:
+                165px;
+
+            height:
+                165px;
+
+            border-radius:
+                50%;
         }
+
 
         .vitamin-d-cover::before {
-            background: rgba(255, 193, 7, 0.18);
+
+            background:
+                rgba(
+                    255,
+                    193,
+                    7,
+                    0.18
+                );
         }
 
+
         .hba1c-cover::before {
-            background: rgba(220, 53, 69, 0.14);
+
+            background:
+                rgba(
+                    220,
+                    53,
+                    69,
+                    0.14
+                );
         }
+
 
         .vitamin-d-icon,
         .hba1c-icon {
-            position: relative;
 
-            z-index: 2;
+            position:
+                relative;
 
-            font-size: 5rem;
+            z-index:
+                2;
 
-            line-height: 1;
+            font-size:
+                5rem;
+
+            line-height:
+                1;
         }
+
 
         .vitamin-d-label,
         .hba1c-label {
-            position: relative;
 
-            z-index: 2;
+            position:
+                relative;
 
-            color: var(--text-dark);
+            z-index:
+                2;
 
-            font-size: 1rem;
-            font-weight: 800;
+            color:
+                var(--text-dark);
 
-            text-transform: uppercase;
-            letter-spacing: 0.06em;
+            font-size:
+                1rem;
+
+            font-weight:
+                800;
+
+            text-transform:
+                uppercase;
+
+            letter-spacing:
+                0.06em;
         }
 
 
-        /* Card content */
+
+        /* CARD CONTENT */
+
 
         .card-content {
-            padding: 26px;
+
+            padding:
+                26px;
         }
+
 
         .category {
-            display: inline-block;
 
-            margin-bottom: 15px;
+            display:
+                inline-block;
 
-            padding: 7px 11px;
+            margin-bottom:
+                15px;
 
-            border-radius: 999px;
+            padding:
+                7px
+                11px;
 
-            background: #e5f6f4;
-            color: var(--primary-dark);
+            border-radius:
+                999px;
 
-            font-size: 0.76rem;
-            font-weight: 800;
+            background:
+                #e5f6f4;
 
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
+            color:
+                var(--primary-dark);
+
+            font-size:
+                0.76rem;
+
+            font-weight:
+                800;
+
+            text-transform:
+                uppercase;
+
+            letter-spacing:
+                0.05em;
         }
+
 
         .card-content h3 {
-            margin: 0;
 
-            color: var(--text-dark);
+            margin:
+                0;
 
-            font-size: 1.5rem;
+            color:
+                var(--text-dark);
 
-            line-height: 1.3;
+            font-size:
+                1.5rem;
+
+            line-height:
+                1.3;
         }
+
 
         .card-content p {
-            margin: 14px 0 22px;
 
-            color: var(--text-medium);
+            margin:
+                14px
+                0
+                22px;
 
-            line-height: 1.7;
+            color:
+                var(--text-medium);
+
+            line-height:
+                1.7;
         }
+
 
         .card-button {
-            display: inline-block;
 
-            padding: 12px 18px;
+            display:
+                inline-block;
 
-            border-radius: 9px;
+            padding:
+                12px
+                18px;
 
-            background: var(--primary);
-            color: white;
+            border-radius:
+                9px;
 
-            text-decoration: none;
-            font-weight: 800;
+            background:
+                var(--primary);
 
-            transition: background 0.2s ease;
+            color:
+                white;
+
+            text-decoration:
+                none;
+
+            font-weight:
+                800;
+
+            transition:
+                background
+                0.2s ease;
         }
+
 
         .card-button:hover {
-            background: var(--primary-dark);
+
+            background:
+                var(--primary-dark);
         }
+
 
         .coming-soon-button {
-            display: inline-block;
 
-            padding: 12px 18px;
+            display:
+                inline-block;
 
-            border-radius: 9px;
+            padding:
+                12px
+                18px;
 
-            background: #e9eef0;
-            color: #71828a;
+            border-radius:
+                9px;
 
-            font-weight: 800;
+            background:
+                #e9eef0;
+
+            color:
+                #71828a;
+
+            font-weight:
+                800;
         }
+
 
 
         /* =========================
-           SUBSCRIBE
+           SUBSCRIBE SECTION
         ========================= */
 
+
         .subscribe-section {
-            margin-top: 70px;
 
-            padding: 55px 36px;
+            margin-top:
+                70px;
 
-            border-radius: 22px;
+            padding:
+                55px
+                36px;
 
-            color: white;
+            border-radius:
+                22px;
 
-            text-align: center;
+            color:
+                white;
+
+            text-align:
+                center;
 
             background:
+
                 radial-gradient(
-                    circle at top right,
-                    rgba(255, 255, 255, 0.18),
-                    transparent 35%
+                    circle
+                    at top right,
+                    rgba(
+                        255,
+                        255,
+                        255,
+                        0.18
+                    ),
+                    transparent
+                    35%
                 ),
+
                 linear-gradient(
                     135deg,
                     var(--primary-dark),
@@ -472,123 +854,208 @@
                 );
 
             box-shadow:
-                0 14px 36px rgba(27, 69, 80, 0.14);
+                0
+                14px
+                36px
+                rgba(
+                    27,
+                    69,
+                    80,
+                    0.14
+                );
         }
+
 
         .subscribe-content {
-            max-width: 760px;
-            margin: auto;
+
+            max-width:
+                760px;
+
+            margin:
+                auto;
         }
+
 
         .subscribe-label {
-            display: inline-block;
 
-            margin-bottom: 12px;
+            display:
+                inline-block;
 
-            font-size: 0.8rem;
-            font-weight: 800;
-
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-        }
-
-        .subscribe-content h2 {
-            margin: 0;
+            margin-bottom:
+                12px;
 
             font-size:
-                clamp(1.9rem, 4vw, 2.7rem);
+                0.8rem;
+
+            font-weight:
+                800;
+
+            text-transform:
+                uppercase;
+
+            letter-spacing:
+                0.08em;
         }
+
+
+        .subscribe-content h2 {
+
+            margin:
+                0;
+
+            font-size:
+                clamp(
+                    1.9rem,
+                    4vw,
+                    2.7rem
+                );
+        }
+
 
         .subscribe-description {
-            max-width: 620px;
 
-            margin: 14px auto 0;
+            max-width:
+                620px;
 
-            color: rgba(255, 255, 255, 0.9);
+            margin:
+                14px
+                auto
+                28px;
 
-            line-height: 1.7;
+            color:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.9
+                );
+
+            line-height:
+                1.7;
         }
 
-        .subscribe-link {
-            display: inline-block;
 
-            margin-top: 28px;
+        /*
+           Container holding the
+           MailerLite embedded form
+        */
 
-            padding: 15px 28px;
+        .mailerlite-form-wrapper {
 
-            border-radius: 10px;
+            max-width:
+                500px;
 
-            background: white;
-            color: var(--primary-dark);
+            margin:
+                0 auto;
 
-            text-decoration: none;
+            padding:
+                18px;
 
-            font-size: 1rem;
-            font-weight: 800;
+            border-radius:
+                16px;
 
-            transition:
-                transform 0.2s ease,
-                box-shadow 0.2s ease,
-                background 0.2s ease;
+            background:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.12
+                );
         }
 
-        .subscribe-link:hover {
-            background: #eef7f7;
-
-            transform: translateY(-2px);
-
-            box-shadow:
-                0 10px 24px rgba(0, 0, 0, 0.14);
-        }
 
         .subscribe-note {
-            margin: 16px auto 0;
 
-            color: rgba(255, 255, 255, 0.76);
+            margin:
+                18px
+                auto
+                0;
 
-            font-size: 0.8rem;
+            color:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.76
+                );
 
-            line-height: 1.5;
+            font-size:
+                0.8rem;
+
+            line-height:
+                1.5;
         }
+
 
 
         /* =========================
            ABOUT
         ========================= */
 
+
         .about {
-            display: grid;
 
-            grid-template-columns: 1fr 1fr;
+            display:
+                grid;
 
-            gap: 32px;
+            grid-template-columns:
+                1fr
+                1fr;
 
-            align-items: center;
+            gap:
+                32px;
 
-            margin-top: 70px;
+            align-items:
+                center;
 
-            padding: 42px;
+            margin-top:
+                70px;
 
-            border: 1px solid var(--border);
-            border-radius: 22px;
+            padding:
+                42px;
 
-            background: var(--surface);
+            border:
+                1px solid
+                var(--border);
+
+            border-radius:
+                22px;
+
+            background:
+                var(--surface);
 
             box-shadow:
-                0 10px 30px rgba(27, 69, 80, 0.07);
+                0
+                10px
+                30px
+                rgba(
+                    27,
+                    69,
+                    80,
+                    0.07
+                );
         }
 
+
         .about-logo-area {
-            display: flex;
 
-            min-height: 260px;
+            display:
+                flex;
 
-            align-items: center;
-            justify-content: center;
+            min-height:
+                260px;
 
-            padding: 35px;
+            align-items:
+                center;
 
-            border-radius: 18px;
+            justify-content:
+                center;
+
+            padding:
+                35px;
+
+            border-radius:
+                18px;
 
             background:
                 linear-gradient(
@@ -598,201 +1065,411 @@
                 );
         }
 
+
         .about-logo {
-            width: min(260px, 80%);
 
-            height: auto;
+            width:
+                min(
+                    260px,
+                    80%
+                );
 
-            object-fit: contain;
+            height:
+                auto;
+
+            object-fit:
+                contain;
         }
+
 
         .about h2 {
-            margin: 0 0 14px;
 
-            color: var(--text-dark);
+            margin:
+                0
+                0
+                14px;
 
-            font-size: 2rem;
+            color:
+                var(--text-dark);
+
+            font-size:
+                2rem;
         }
+
 
         .about p {
-            margin: 0;
 
-            color: var(--text-medium);
+            margin:
+                0;
 
-            line-height: 1.8;
+            color:
+                var(--text-medium);
+
+            line-height:
+                1.8;
         }
+
 
 
         /* =========================
            FOOTER
         ========================= */
 
+
         footer {
-            margin-top: 80px;
 
-            padding: 42px 24px;
+            margin-top:
+                80px;
 
-            background: #113f4e;
+            padding:
+                42px
+                24px;
 
-            color: white;
+            background:
+                #113f4e;
+
+            color:
+                white;
         }
+
 
         .footer-inner {
-            max-width: 900px;
 
-            margin: auto;
+            max-width:
+                900px;
 
-            text-align: center;
+            margin:
+                auto;
+
+            text-align:
+                center;
         }
+
 
         .footer-brand {
-            display: flex;
 
-            align-items: center;
-            justify-content: center;
+            display:
+                flex;
 
-            gap: 10px;
+            align-items:
+                center;
 
-            margin-bottom: 16px;
+            justify-content:
+                center;
 
-            font-weight: 800;
+            gap:
+                10px;
+
+            margin-bottom:
+                16px;
+
+            font-weight:
+                800;
         }
+
 
         .footer-logo {
-            width: 34px;
-            height: 34px;
 
-            object-fit: contain;
+            width:
+                34px;
+
+            height:
+                34px;
+
+            object-fit:
+                contain;
         }
+
 
         .footer-inner p {
-            margin: 8px 0;
 
-            line-height: 1.6;
+            margin:
+                8px
+                0;
+
+            line-height:
+                1.6;
         }
+
 
         .disclaimer {
-            max-width: 780px;
 
-            margin: 15px auto 0;
+            max-width:
+                780px;
 
-            color: rgba(255, 255, 255, 0.73);
+            margin:
+                15px
+                auto
+                0;
 
-            font-size: 0.88rem;
+            color:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.73
+                );
+
+            font-size:
+                0.88rem;
         }
+
 
 
         /* =========================
            RESPONSIVE
         ========================= */
 
+
         @media (max-width: 760px) {
 
             .navbar-inner {
-                min-height: 68px;
+
+                min-height:
+                    68px;
             }
+
 
             .brand-subtitle {
-                display: none;
+
+                display:
+                    none;
             }
+
 
             .hero {
-                padding: 70px 20px;
+
+                padding:
+                    70px
+                    20px;
             }
+
 
             main {
-                margin-top: 45px;
+
+                margin-top:
+                    45px;
             }
+
 
             .about {
-                grid-template-columns: 1fr;
 
-                padding: 28px;
+                grid-template-columns:
+                    1fr;
+
+                padding:
+                    28px;
             }
+
 
             .about-logo-area {
-                min-height: 210px;
+
+                min-height:
+                    210px;
             }
 
+
             .placeholder-image {
-                height: 220px;
+
+                height:
+                    220px;
             }
+
         }
+
 
 
         @media (max-width: 650px) {
 
             .subscribe-section {
-                padding: 40px 22px;
+
+                padding:
+                    40px
+                    22px;
             }
 
-            .subscribe-link {
-                width: 100%;
-                max-width: 320px;
+
+            .mailerlite-form-wrapper {
+
+                padding:
+                    12px;
             }
+
         }
+
 
 
         @media (max-width: 550px) {
 
             .navbar-inner {
-                align-items: flex-start;
 
-                flex-direction: column;
+                align-items:
+                    flex-start;
 
-                padding: 14px 0;
+                flex-direction:
+                    column;
+
+                padding:
+                    14px
+                    0;
             }
+
 
             .nav-links {
-                width: 100%;
 
-                justify-content: space-between;
+                width:
+                    100%;
 
-                gap: 12px;
+                justify-content:
+                    space-between;
+
+                gap:
+                    12px;
             }
+
         }
+
 
 
         @media (max-width: 480px) {
 
             .brand-logo {
-                width: 40px;
-                height: 40px;
+
+                width:
+                    40px;
+
+                height:
+                    40px;
             }
+
 
             .brand-name {
-                font-size: 0.96rem;
+
+                font-size:
+                    0.96rem;
             }
+
 
             .hero h1 {
-                font-size: 2.3rem;
+
+                font-size:
+                    2.3rem;
             }
 
+
             .card-content {
-                padding: 22px;
+
+                padding:
+                    22px;
             }
+
         }
 
     </style>
 
+
+
+    <!-- =====================================
+         MAILERLITE UNIVERSAL SCRIPT
+
+         IMPORTANT:
+         Keep this inside HEAD.
+    ====================================== -->
+
+    <script>
+
+        (
+            function(
+                w,
+                d,
+                e,
+                u,
+                f,
+                l,
+                n
+            ) {
+
+                w[f] =
+                    w[f] ||
+                    function() {
+
+                        (
+                            w[f].q =
+                                w[f].q ||
+                                []
+                        )
+                        .push(arguments);
+
+                    };
+
+
+                l =
+                    d.createElement(e);
+
+
+                l.async =
+                    1;
+
+
+                l.src =
+                    u;
+
+
+                n =
+                    d.getElementsByTagName(e)[0];
+
+
+                n.parentNode
+                    .insertBefore(
+                        l,
+                        n
+                    );
+
+            }
+
+        )(
+            window,
+            document,
+            'script',
+            'https://assets.mailerlite.com/js/universal.js',
+            'ml'
+        );
+
+
+        ml(
+            'account',
+            '2562673'
+        );
+
+    </script>
+
+    <!-- End MailerLite Universal -->
+
+
 </head>
+
 
 
 <body>
 
 
+
     <!-- =========================
          NAVIGATION
-    ========================== -->
+    ========================= -->
+
 
     <nav class="navbar">
 
+
         <div class="navbar-inner">
+
 
             <a
                 class="brand"
                 href="index.html"
             >
+
 
                 <img
                     class="brand-logo"
@@ -800,245 +1477,398 @@
                     alt="Phoenix AI logo"
                 >
 
+
                 <span class="brand-text">
 
+
                     <span class="brand-name">
+
                         Your Health Intelligence
+
                     </span>
+
 
                     <span class="brand-subtitle">
+
                         Evidence-based health education
+
                     </span>
 
+
                 </span>
+
 
             </a>
 
 
+
             <div class="nav-links">
 
+
                 <a href="#newsletters">
+
                     Newsletters
+
                 </a>
+
 
                 <a href="#subscribe">
+
                     Subscribe
+
                 </a>
 
+
                 <a href="#about">
+
                     About
+
                 </a>
+
 
             </div>
 
+
         </div>
+
 
     </nav>
 
 
+
     <!-- =========================
          HERO
-    ========================== -->
+    ========================= -->
+
 
     <header class="hero">
 
+
         <div class="hero-content">
 
+
             <span class="hero-badge">
+
                 Phoenix AI Newsletter Library
+
             </span>
 
+
             <h1>
-                Understand your health, one insight at a time
+
+                Understand your health,
+                one insight at a time
+
             </h1>
 
+
             <p>
-                Explore clear and accessible newsletters about biomarkers,
-                laboratory results, nutrition, preventive health, and wellness.
+
+                Explore clear and accessible newsletters
+                about biomarkers, laboratory results,
+                nutrition, preventive health, and wellness.
+
             </p>
+
 
             <a
                 class="hero-button"
                 href="#newsletters"
             >
+
                 Explore newsletters
+
             </a>
 
+
         </div>
+
 
     </header>
 
 
+
     <!-- =========================
          MAIN
-    ========================== -->
+    ========================= -->
+
 
     <main>
 
 
-        <!-- NEWSLETTERS -->
+
+        <!-- =========================
+             NEWSLETTERS
+        ========================= -->
+
 
         <section id="newsletters">
 
+
             <div class="section-header">
 
+
                 <div class="section-kicker">
+
                     Health education
+
                 </div>
 
+
                 <h2>
+
                     Latest newsletters
+
                 </h2>
 
+
                 <p>
-                    Browse educational resources designed to simplify complex
-                    health and laboratory topics.
+
+                    Browse educational resources designed
+                    to simplify complex health and
+                    laboratory topics.
+
                 </p>
 
+
             </div>
+
 
 
             <div class="newsletter-grid">
 
 
-                <!-- Vitamin D -->
+
+                <!-- =========================
+                     VITAMIN D
+                ========================= -->
+
 
                 <article class="newsletter-card">
 
-                    <div class="placeholder-image vitamin-d-cover">
+
+                    <div
+                        class="placeholder-image vitamin-d-cover"
+                    >
+
 
                         <span
                             class="vitamin-d-icon"
                             role="img"
                             aria-label="Sun"
                         >
+
                             ☀️
+
                         </span>
 
-                        <span class="vitamin-d-label">
+
+                        <span
+                            class="vitamin-d-label"
+                        >
+
                             Vitamin D
+
                         </span>
+
 
                     </div>
 
 
+
                     <div class="card-content">
 
+
                         <span class="category">
+
                             Biomarker Spotlight
+
                         </span>
 
+
                         <h3>
-                            Vitamin D: The Sunshine Vitamin
+
+                            Vitamin D:
+                            The Sunshine Vitamin
+
                         </h3>
 
+
                         <p>
-                            Learn why vitamin D matters, where it comes from,
-                            who may be at risk of low levels, and how laboratory
-                            results are generally understood.
+
+                            Learn why vitamin D matters,
+                            where it comes from,
+                            who may be at risk of low levels,
+                            and how laboratory results
+                            are generally understood.
+
                         </p>
+
 
                         <a
                             class="card-button"
                             href="vitamin-d.html"
                         >
+
                             Read Newsletter →
+
                         </a>
 
+
                     </div>
+
 
                 </article>
 
 
-                <!-- HbA1c -->
+
+                <!-- =========================
+                     HBA1C
+                ========================= -->
+
 
                 <article class="newsletter-card">
 
-                    <div class="placeholder-image hba1c-cover">
+
+                    <div
+                        class="placeholder-image hba1c-cover"
+                    >
+
 
                         <span
                             class="hba1c-icon"
                             role="img"
                             aria-label="Blood drop"
                         >
+
                             🩸
+
                         </span>
 
-                        <span class="hba1c-label">
+
+                        <span
+                            class="hba1c-label"
+                        >
+
                             HbA1c
+
                         </span>
+
 
                     </div>
 
 
+
                     <div class="card-content">
 
+
                         <span class="category">
+
                             Biomarker Spotlight
+
                         </span>
 
+
                         <h3>
+
                             Understanding HbA1c:
                             Your Blood Sugar Report Card
+
                         </h3>
 
+
                         <p>
-                            Learn what HbA1c measures, what your results mean,
-                            and how this test reflects your average blood sugar
+
+                            Learn what HbA1c measures,
+                            what your results mean,
+                            and how this test reflects
+                            your average blood sugar
                             over the past 2–3 months.
+
                         </p>
+
 
                         <a
                             class="card-button"
                             href="hba1c.html"
                         >
+
                             Read Newsletter →
+
                         </a>
 
+
                     </div>
+
 
                 </article>
 
 
-                <!-- Cholesterol -->
+
+                <!-- =========================
+                     CHOLESTEROL
+                ========================= -->
+
 
                 <article class="newsletter-card">
+
 
                     <div
                         class="placeholder-image"
                         role="img"
                         aria-label="Heart"
                     >
+
                         ❤️
+
                     </div>
+
 
 
                     <div class="card-content">
 
+
                         <span class="category">
+
                             Coming Soon
+
                         </span>
+
 
                         <h3>
+
                             Cholesterol and Heart Health
+
                         </h3>
 
+
                         <p>
-                            Explore LDL, HDL, triglycerides, and how cholesterol
-                            values contribute to an overall cardiovascular
-                            health assessment.
+
+                            Explore LDL, HDL, triglycerides,
+                            and how cholesterol values
+                            contribute to an overall
+                            cardiovascular health assessment.
+
                         </p>
 
-                        <span class="coming-soon-button">
+
+                        <span
+                            class="coming-soon-button"
+                        >
+
                             Coming Soon
+
                         </span>
 
+
                     </div>
+
 
                 </article>
 
 
             </div>
+
 
         </section>
 
@@ -1046,50 +1876,73 @@
 
         <!-- =========================
              SUBSCRIBE
-        ========================== -->
+        ========================= -->
+
 
         <section
             class="subscribe-section"
             id="subscribe"
         >
 
+
             <div class="subscribe-content">
 
+
                 <span class="subscribe-label">
+
                     Stay Informed
+
                 </span>
 
+
                 <h2>
+
                     Get Phoenix AI health insights by email
+
                 </h2>
 
+
                 <p class="subscribe-description">
+
                     Subscribe to receive new biomarker guides,
-                    health education newsletters, and
-                    evidence-based wellness content.
+                    health education newsletters,
+                    and evidence-based wellness content.
+
                 </p>
 
 
-                <!--
-                    MailerLite hosted subscription page.
-                    This opens the signup form in a new tab.
-                -->
 
-                <a
-                    class="subscribe-link"
-                    href="https://preview.mailerlite.io/forms/2562673/195164877065553192/share"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Subscribe to Newsletter →
-                </a>
+                <!-- =====================================
+                     MAILERLITE EMBED FORM
+
+                     This is your MailerLite form.
+                     Do NOT replace this with a form action.
+                ====================================== -->
+
+
+                <div class="mailerlite-form-wrapper">
+
+
+                    <div
+                        class="ml-embedded"
+                        data-form="TobT5s"
+                    >
+                    </div>
+
+
+                </div>
+
 
 
                 <p class="subscribe-note">
+
                     You can unsubscribe at any time.
+
                 </p>
 
+
             </div>
+
 
         </section>
 
@@ -1097,14 +1950,17 @@
 
         <!-- =========================
              ABOUT
-        ========================== -->
+        ========================= -->
+
 
         <section
             class="about"
             id="about"
         >
 
+
             <div class="about-logo-area">
+
 
                 <img
                     class="about-logo"
@@ -1112,30 +1968,45 @@
                     alt="Phoenix AI"
                 >
 
+
             </div>
+
 
 
             <div>
 
+
                 <div class="section-kicker">
+
                     About the library
+
                 </div>
 
+
                 <h2>
-                    About Phoenix AI – Your Health Intelligence
+
+                    About Phoenix AI –
+                    Your Health Intelligence
+
                 </h2>
 
+
                 <p>
-                    Phoenix AI is an educational newsletter library
-                    designed to help readers better understand biomarkers,
-                    laboratory results, nutrition, preventive health,
+
+                    Phoenix AI is an educational newsletter
+                    library designed to help readers better
+                    understand biomarkers, laboratory results,
+                    nutrition, preventive health,
                     and evidence-based wellness topics.
 
-                    Each newsletter presents complex health information
-                    in clear and accessible language.
+                    Each newsletter presents complex health
+                    information in clear and accessible language.
+
                 </p>
 
+
             </div>
+
 
         </section>
 
@@ -1146,13 +2017,17 @@
 
     <!-- =========================
          FOOTER
-    ========================== -->
+    ========================= -->
+
 
     <footer>
 
+
         <div class="footer-inner">
 
+
             <div class="footer-brand">
+
 
                 <img
                     class="footer-logo"
@@ -1160,30 +2035,44 @@
                     alt=""
                 >
 
+
                 <span>
-                    Phoenix AI – Your Health Intelligence
+
+                    Phoenix AI –
+                    Your Health Intelligence
+
                 </span>
+
 
             </div>
 
 
+
             <p>
-                © 2026 Phoenix AI. All rights reserved.
+
+                © 2026 Phoenix AI.
+                All rights reserved.
+
             </p>
+
 
 
             <p class="disclaimer">
 
-                This content is provided for general educational purposes
-                only and is not a substitute for professional medical advice,
+                This content is provided for general
+                educational purposes only and is not
+                a substitute for professional medical advice,
                 diagnosis, or treatment.
 
-                Always consult a qualified healthcare professional regarding
-                personal laboratory results or health concerns.
+                Always consult a qualified healthcare
+                professional regarding personal laboratory
+                results or health concerns.
 
             </p>
 
+
         </div>
+
 
     </footer>
 
