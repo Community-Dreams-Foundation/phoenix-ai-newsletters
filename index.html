@@ -12,7 +12,7 @@
 
     <meta
         name="description"
-        content="Phoenix AI Health Insights provides accessible educational newsletters about biomarkers, laboratory results, nutrition, and preventive health."
+        content="Phoenix AI provides accessible educational newsletters about biomarkers, laboratory results, nutrition, and preventive health."
     >
 
     <style>
@@ -60,8 +60,8 @@
         .navbar-inner {
             width: 92%;
             max-width: 1150px;
-            margin: auto;
             min-height: 76px;
+            margin: auto;
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -93,9 +93,9 @@
         }
 
         .brand-subtitle {
+            margin-top: 3px;
             color: var(--text-medium);
             font-size: 0.78rem;
-            margin-top: 3px;
         }
 
         .nav-links {
@@ -118,6 +118,8 @@
         /* Hero */
 
         .hero {
+            padding: 95px 24px;
+            color: white;
             background:
                 radial-gradient(
                     circle at top right,
@@ -130,8 +132,6 @@
                     var(--primary),
                     var(--secondary)
                 );
-            color: white;
-            padding: 95px 24px;
         }
 
         .hero-content {
@@ -143,13 +143,13 @@
 
         .hero-badge {
             display: inline-block;
+            margin-bottom: 22px;
             padding: 8px 14px;
             border: 1px solid rgba(255, 255, 255, 0.35);
             border-radius: 999px;
             background: rgba(255, 255, 255, 0.13);
             font-size: 0.85rem;
             font-weight: 700;
-            margin-bottom: 22px;
         }
 
         .hero h1 {
@@ -161,9 +161,9 @@
         .hero p {
             max-width: 720px;
             margin: 22px auto 0;
+            color: rgba(255, 255, 255, 0.92);
             font-size: 1.15rem;
             line-height: 1.75;
-            color: rgba(255, 255, 255, 0.92);
         }
 
         .hero-button {
@@ -198,18 +198,18 @@
         }
 
         .section-kicker {
+            margin-bottom: 9px;
             color: var(--primary);
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
             font-size: 0.8rem;
             font-weight: 800;
-            margin-bottom: 9px;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
         }
 
         .section-header h2 {
             margin: 0;
-            font-size: clamp(1.9rem, 4vw, 2.7rem);
             color: var(--text-dark);
+            font-size: clamp(1.9rem, 4vw, 2.7rem);
         }
 
         .section-header p {
@@ -228,10 +228,10 @@
         }
 
         .newsletter-card {
-            background: var(--surface);
+            overflow: hidden;
             border: 1px solid var(--border);
             border-radius: 20px;
-            overflow: hidden;
+            background: var(--surface);
             box-shadow: 0 10px 30px rgba(27, 69, 80, 0.08);
             transition:
                 transform 0.25s ease,
@@ -243,20 +243,13 @@
             box-shadow: 0 18px 42px rgba(27, 69, 80, 0.14);
         }
 
-        .newsletter-image {
-            width: 100%;
-            height: 260px;
-            object-fit: cover;
-            object-position: top;
-            display: block;
-            background: #e8f1f2;
-        }
-
         .placeholder-image {
-            height: 260px;
+            position: relative;
             display: flex;
+            height: 260px;
             align-items: center;
             justify-content: center;
+            overflow: hidden;
             background:
                 linear-gradient(
                     135deg,
@@ -266,37 +259,46 @@
             font-size: 4.5rem;
         }
 
-        .vitamin-d-cover {
-            position: relative;
+        .vitamin-d-cover,
+        .hba1c-cover {
             flex-direction: column;
             gap: 12px;
-            overflow: hidden;
         }
 
-        .vitamin-d-cover::before {
+        .vitamin-d-cover::before,
+        .hba1c-cover::before {
             content: "";
             position: absolute;
             width: 165px;
             height: 165px;
             border-radius: 50%;
+        }
+
+        .vitamin-d-cover::before {
             background: rgba(255, 193, 7, 0.18);
         }
 
-        .vitamin-d-icon {
+        .hba1c-cover::before {
+            background: rgba(220, 53, 69, 0.14);
+        }
+
+        .vitamin-d-icon,
+        .hba1c-icon {
             position: relative;
             z-index: 2;
             font-size: 5rem;
             line-height: 1;
         }
 
-        .vitamin-d-label {
+        .vitamin-d-label,
+        .hba1c-label {
             position: relative;
             z-index: 2;
             color: var(--text-dark);
             font-size: 1rem;
             font-weight: 800;
-            letter-spacing: 0.06em;
             text-transform: uppercase;
+            letter-spacing: 0.06em;
         }
 
         .card-content {
@@ -305,22 +307,22 @@
 
         .category {
             display: inline-block;
-            background: #e5f6f4;
-            color: var(--primary-dark);
+            margin-bottom: 15px;
             padding: 7px 11px;
             border-radius: 999px;
+            background: #e5f6f4;
+            color: var(--primary-dark);
             font-size: 0.76rem;
             font-weight: 800;
             text-transform: uppercase;
             letter-spacing: 0.05em;
-            margin-bottom: 15px;
         }
 
         .card-content h3 {
             margin: 0;
+            color: var(--text-dark);
             font-size: 1.5rem;
             line-height: 1.3;
-            color: var(--text-dark);
         }
 
         .card-content p {
@@ -331,10 +333,10 @@
 
         .card-button {
             display: inline-block;
-            background: var(--primary);
-            color: white;
             padding: 12px 18px;
             border-radius: 9px;
+            background: var(--primary);
+            color: white;
             text-decoration: none;
             font-weight: 800;
             transition: background 0.2s ease;
@@ -346,30 +348,127 @@
 
         .coming-soon-button {
             display: inline-block;
-            background: #e9eef0;
-            color: #71828a;
             padding: 12px 18px;
             border-radius: 9px;
+            background: #e9eef0;
+            color: #71828a;
             font-weight: 800;
+        }
+
+        /* Subscription */
+
+        .subscribe-section {
+            margin-top: 70px;
+            padding: 50px 36px;
+            border-radius: 22px;
+            color: white;
+            text-align: center;
+            background:
+                radial-gradient(
+                    circle at top right,
+                    rgba(255, 255, 255, 0.18),
+                    transparent 35%
+                ),
+                linear-gradient(
+                    135deg,
+                    var(--primary-dark),
+                    var(--primary),
+                    var(--secondary)
+                );
+            box-shadow: 0 14px 36px rgba(27, 69, 80, 0.14);
+        }
+
+        .subscribe-content {
+            max-width: 760px;
+            margin: auto;
+        }
+
+        .subscribe-label {
+            display: inline-block;
+            margin-bottom: 12px;
+            font-size: 0.8rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        .subscribe-content h2 {
+            margin: 0;
+            font-size: clamp(1.9rem, 4vw, 2.7rem);
+        }
+
+        .subscribe-description {
+            max-width: 620px;
+            margin: 14px auto 0;
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.7;
+        }
+
+        .subscribe-form {
+            display: flex;
+            max-width: 620px;
+            margin: 28px auto 0;
+            gap: 10px;
+        }
+
+        .subscribe-form input[type="email"] {
+            flex: 1;
+            min-width: 0;
+            padding: 15px 17px;
+            border: 1px solid transparent;
+            border-radius: 10px;
+            font-size: 1rem;
+            outline: none;
+        }
+
+        .subscribe-form input[type="email"]:focus {
+            border-color: var(--primary-dark);
+            box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3);
+        }
+
+        .subscribe-form button {
+            padding: 15px 24px;
+            border: 0;
+            border-radius: 10px;
+            background: white;
+            color: var(--primary-dark);
+            font-size: 1rem;
+            font-weight: 800;
+            cursor: pointer;
+        }
+
+        .subscribe-form button:hover {
+            background: #eef7f7;
+        }
+
+        .subscribe-note {
+            margin: 14px auto 0;
+            color: rgba(255, 255, 255, 0.76);
+            font-size: 0.8rem;
+            line-height: 1.5;
         }
 
         /* About section */
 
         .about {
-            margin-top: 70px;
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 32px;
             align-items: center;
-            background: var(--surface);
+            margin-top: 70px;
+            padding: 42px;
             border: 1px solid var(--border);
             border-radius: 22px;
-            padding: 42px;
+            background: var(--surface);
             box-shadow: 0 10px 30px rgba(27, 69, 80, 0.07);
         }
 
         .about-logo-area {
+            display: flex;
             min-height: 260px;
+            align-items: center;
+            justify-content: center;
+            padding: 35px;
             border-radius: 18px;
             background:
                 linear-gradient(
@@ -377,10 +476,6 @@
                     #e7f7f5,
                     #edf3f5
                 );
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 35px;
         }
 
         .about-logo {
@@ -391,8 +486,8 @@
 
         .about h2 {
             margin: 0 0 14px;
-            font-size: 2rem;
             color: var(--text-dark);
+            font-size: 2rem;
         }
 
         .about p {
@@ -404,10 +499,10 @@
         /* Footer */
 
         footer {
+            margin-top: 80px;
+            padding: 42px 24px;
             background: #113f4e;
             color: white;
-            padding: 42px 24px;
-            margin-top: 80px;
         }
 
         .footer-inner {
@@ -418,11 +513,11 @@
 
         .footer-brand {
             display: flex;
-            justify-content: center;
             align-items: center;
+            justify-content: center;
             gap: 10px;
-            font-weight: 800;
             margin-bottom: 16px;
+            font-weight: 800;
         }
 
         .footer-logo {
@@ -437,10 +532,10 @@
         }
 
         .disclaimer {
-            color: rgba(255, 255, 255, 0.73);
-            font-size: 0.88rem;
             max-width: 780px;
             margin: 15px auto 0;
+            color: rgba(255, 255, 255, 0.73);
+            font-size: 0.88rem;
         }
 
         /* Responsive layout */
@@ -451,10 +546,6 @@
             }
 
             .brand-subtitle {
-                display: none;
-            }
-
-            .nav-links a:not(:first-child) {
                 display: none;
             }
 
@@ -475,9 +566,36 @@
                 min-height: 210px;
             }
 
-            .newsletter-image,
             .placeholder-image {
                 height: 220px;
+            }
+        }
+
+        @media (max-width: 650px) {
+            .subscribe-section {
+                padding: 38px 22px;
+            }
+
+            .subscribe-form {
+                flex-direction: column;
+            }
+
+            .subscribe-form button {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 550px) {
+            .navbar-inner {
+                align-items: flex-start;
+                flex-direction: column;
+                padding: 14px 0;
+            }
+
+            .nav-links {
+                width: 100%;
+                justify-content: space-between;
+                gap: 12px;
             }
         }
 
@@ -491,48 +609,11 @@
                 font-size: 0.96rem;
             }
 
-            .nav-links {
-                gap: 12px;
-            }
-
             .hero h1 {
                 font-size: 2.3rem;
             }
 
-            .vitamin-d-cover {
-            position: relative;
-            flex-direction: column;
-            gap: 12px;
-            overflow: hidden;
-        }
-
-        .vitamin-d-cover::before {
-            content: "";
-            position: absolute;
-            width: 165px;
-            height: 165px;
-            border-radius: 50%;
-            background: rgba(255, 193, 7, 0.18);
-        }
-
-        .vitamin-d-icon {
-            position: relative;
-            z-index: 2;
-            font-size: 5rem;
-            line-height: 1;
-        }
-
-        .vitamin-d-label {
-            position: relative;
-            z-index: 2;
-            color: var(--text-dark);
-            font-size: 1rem;
-            font-weight: 800;
-            letter-spacing: 0.06em;
-            text-transform: uppercase;
-        }
-
-        .card-content {
+            .card-content {
                 padding: 22px;
             }
         }
@@ -545,6 +626,7 @@
         <div class="navbar-inner">
 
             <a class="brand" href="index.html">
+
                 <img
                     class="brand-logo"
                     src="images/phoenix-logo.png"
@@ -552,6 +634,7 @@
                 >
 
                 <span class="brand-text">
+
                     <span class="brand-name">
                         Your Health Intelligence
                     </span>
@@ -559,11 +642,14 @@
                     <span class="brand-subtitle">
                         Evidence-based health education
                     </span>
+
                 </span>
+
             </a>
 
             <div class="nav-links">
                 <a href="#newsletters">Newsletters</a>
+                <a href="#subscribe">Subscribe</a>
                 <a href="#about">About</a>
             </div>
 
@@ -571,6 +657,7 @@
     </nav>
 
     <header class="hero">
+
         <div class="hero-content">
 
             <span class="hero-badge">
@@ -591,6 +678,7 @@
             </a>
 
         </div>
+
     </header>
 
     <main>
@@ -598,6 +686,7 @@
         <section id="newsletters">
 
             <div class="section-header">
+
                 <div class="section-kicker">
                     Health education
                 </div>
@@ -608,6 +697,7 @@
                     Browse educational resources designed to simplify complex
                     health and laboratory topics.
                 </p>
+
             </div>
 
             <div class="newsletter-grid">
@@ -615,13 +705,19 @@
                 <article class="newsletter-card">
 
                     <div class="placeholder-image vitamin-d-cover">
-                        <span class="vitamin-d-icon" role="img" aria-label="Sun">
+
+                        <span
+                            class="vitamin-d-icon"
+                            role="img"
+                            aria-label="Sun"
+                        >
                             ☀️
                         </span>
 
                         <span class="vitamin-d-label">
                             Vitamin D
                         </span>
+
                     </div>
 
                     <div class="card-content">
@@ -652,9 +748,9 @@
                 </article>
 
                 <article class="newsletter-card">
-                
+
                     <div class="placeholder-image hba1c-cover">
-                
+
                         <span
                             class="hba1c-icon"
                             role="img"
@@ -662,39 +758,40 @@
                         >
                             🩸
                         </span>
-                
+
                         <span class="hba1c-label">
                             HbA1c
                         </span>
-                
+
                     </div>
-                
+
                     <div class="card-content">
-                
+
                         <span class="category">
-                            Biomarker Spotlight
+                            Biomarker spotlight
                         </span>
-                
+
                         <h3>
                             Understanding HbA1c: Your Blood Sugar Report Card
                         </h3>
-                
+
                         <p>
-                            Learn what HbA1c measures, what your results mean, and how this
-                            simple blood test reflects your average blood sugar over the past
-                            2–3 months.
+                            Learn what HbA1c measures, what your results mean,
+                            and how this test reflects your average blood sugar
+                            over the past 2–3 months.
                         </p>
-                
+
                         <a
                             class="card-button"
                             href="hba1c.html"
                         >
-                            Read Newsletter →
+                            Read newsletter →
                         </a>
-                
+
                     </div>
-                
+
                 </article>
+
                 <article class="newsletter-card">
 
                     <div class="placeholder-image">
@@ -729,6 +826,55 @@
 
         </section>
 
+        <section class="subscribe-section" id="subscribe">
+
+            <div class="subscribe-content">
+
+                <span class="subscribe-label">
+                    Stay informed
+                </span>
+
+                <h2>
+                    Get Phoenix AI health insights by email
+                </h2>
+
+                <p class="subscribe-description">
+                    Subscribe to receive new biomarker guides, health education
+                    newsletters, and evidence-based wellness content.
+                </p>
+
+                <form
+                    class="subscribe-form"
+                    action="PASTE-YOUR-SUBSCRIPTION-FORM-URL-HERE"
+                    method="post"
+                    target="_blank"
+                >
+
+                    <input
+                        type="email"
+                        name="EMAIL"
+                        placeholder="Enter your email address"
+                        aria-label="Email address"
+                        autocomplete="email"
+                        required
+                    >
+
+                    <button type="submit">
+                        Subscribe
+                    </button>
+
+                </form>
+
+                <p class="subscribe-note">
+                    By subscribing, you agree to receive educational emails
+                    from Phoenix AI. You may unsubscribe at any time. Do not
+                    submit personal health or medical information.
+                </p>
+
+            </div>
+
+        </section>
+
         <section class="about" id="about">
 
             <div class="about-logo-area">
@@ -747,15 +893,16 @@
                     About the library
                 </div>
 
-                <h2>About Phoenix AI - Your Health Intelligence</h2>
+                <h2>
+                    About Phoenix AI – Your Health Intelligence
+                </h2>
 
                 <p>
-                    Phoenix AI, Your Health Intelligence, is an educational newsletter
-                    library designed to help readers better understand
-                    biomarkers, laboratory results, nutrition, preventive
-                    health, and evidence-based wellness topics. Each newsletter
-                    presents complex health information in clear and accessible
-                    language.
+                    Phoenix AI is an educational newsletter library designed
+                    to help readers better understand biomarkers, laboratory
+                    results, nutrition, preventive health, and evidence-based
+                    wellness topics. Each newsletter presents complex health
+                    information in clear and accessible language.
                 </p>
 
             </div>
@@ -765,6 +912,7 @@
     </main>
 
     <footer>
+
         <div class="footer-inner">
 
             <div class="footer-brand">
@@ -775,7 +923,9 @@
                     alt=""
                 >
 
-                <span>Phoenix AI - Your Health Intelligence</span>
+                <span>
+                    Phoenix AI – Your Health Intelligence
+                </span>
 
             </div>
 
@@ -792,6 +942,7 @@
             </p>
 
         </div>
+
     </footer>
 
 </body>
