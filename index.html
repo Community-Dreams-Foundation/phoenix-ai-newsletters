@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
 
     <meta
@@ -16,6 +18,7 @@
     >
 
     <style>
+
         :root {
             --primary: #087f8c;
             --primary-dark: #075d68;
@@ -46,7 +49,10 @@
             color: inherit;
         }
 
-        /* Navigation */
+
+        /* =========================
+           NAVIGATION
+        ========================= */
 
         .navbar {
             position: sticky;
@@ -62,9 +68,11 @@
             max-width: 1150px;
             margin: auto;
             min-height: 76px;
+
             display: flex;
             align-items: center;
             justify-content: space-between;
+
             gap: 24px;
         }
 
@@ -72,6 +80,7 @@
             display: flex;
             align-items: center;
             gap: 12px;
+
             text-decoration: none;
         }
 
@@ -115,9 +124,13 @@
             color: var(--primary);
         }
 
-        /* Hero */
+
+        /* =========================
+           HERO
+        ========================= */
 
         .hero {
+
             background:
                 radial-gradient(
                     circle at top right,
@@ -130,322 +143,615 @@
                     var(--primary),
                     var(--secondary)
                 );
+
             color: white;
+
             padding: 95px 24px;
         }
 
         .hero-content {
+
             width: 92%;
             max-width: 1000px;
+
             margin: auto;
+
             text-align: center;
         }
 
         .hero-badge {
+
             display: inline-block;
+
             padding: 8px 14px;
+
             border: 1px solid rgba(255, 255, 255, 0.35);
+
             border-radius: 999px;
+
             background: rgba(255, 255, 255, 0.13);
+
             font-size: 0.85rem;
             font-weight: 700;
+
             margin-bottom: 22px;
         }
 
         .hero h1 {
+
             margin: 0;
+
             font-size: clamp(2.5rem, 6vw, 4.8rem);
+
             line-height: 1.08;
         }
 
         .hero p {
+
             max-width: 720px;
+
             margin: 22px auto 0;
+
             font-size: 1.15rem;
+
             line-height: 1.75;
+
             color: rgba(255, 255, 255, 0.92);
         }
 
         .hero-button {
+
             display: inline-block;
+
             margin-top: 30px;
+
             padding: 14px 22px;
+
             border-radius: 10px;
+
             background: white;
+
             color: var(--primary-dark);
+
             text-decoration: none;
+
             font-weight: 800;
+
             transition:
                 transform 0.2s ease,
                 box-shadow 0.2s ease;
         }
 
         .hero-button:hover {
+
             transform: translateY(-2px);
+
             box-shadow: 0 10px 24px rgba(0, 0, 0, 0.16);
         }
 
-        /* Main content */
+
+        /* =========================
+           MAIN
+        ========================= */
 
         main {
+
             width: 92%;
+
             max-width: 1150px;
+
             margin: 65px auto;
         }
 
         .section-header {
+
             margin-bottom: 30px;
         }
 
         .section-kicker {
+
             color: var(--primary);
+
             text-transform: uppercase;
+
             letter-spacing: 0.08em;
+
             font-size: 0.8rem;
+
             font-weight: 800;
+
             margin-bottom: 9px;
         }
 
         .section-header h2 {
+
             margin: 0;
+
             font-size: clamp(1.9rem, 4vw, 2.7rem);
+
             color: var(--text-dark);
         }
 
         .section-header p {
+
             max-width: 700px;
+
             margin: 12px 0 0;
+
             color: var(--text-medium);
+
             line-height: 1.7;
         }
 
-        /* Newsletter cards */
+
+        /* =========================
+           NEWSLETTER CARDS
+        ========================= */
 
         .newsletter-grid {
+
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(290px, 1fr));
+
             gap: 28px;
         }
 
         .newsletter-card {
+
             background: var(--surface);
+
             border: 1px solid var(--border);
+
             border-radius: 20px;
+
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(27, 69, 80, 0.08);
+
+            box-shadow:
+                0 10px 30px rgba(27, 69, 80, 0.08);
+
             transition:
                 transform 0.25s ease,
                 box-shadow 0.25s ease;
         }
 
         .newsletter-card:hover {
+
             transform: translateY(-6px);
-            box-shadow: 0 18px 42px rgba(27, 69, 80, 0.14);
+
+            box-shadow:
+                0 18px 42px rgba(27, 69, 80, 0.14);
         }
 
-        .newsletter-image {
-            width: 100%;
-            height: 260px;
-            object-fit: contain;
-            object-position: top;
-            display: block;
-            background: #e8f1f2;
-        }
+
+        /* =========================
+           GENERIC COVER
+        ========================= */
 
         .placeholder-image {
+
             height: 260px;
+
+            width: 100%;
+
             display: flex;
+
             align-items: center;
+
             justify-content: center;
+
             background:
                 linear-gradient(
                     135deg,
                     #e5f5f3,
                     #edf3f5
                 );
-            font-size: 4.5rem;
-        }
 
-        .vitamin-d-cover {
-            position: relative;
-            flex-direction: column;
-            gap: 12px;
             overflow: hidden;
         }
 
+
+        /* =========================
+           VITAMIN D COVER
+        ========================= */
+
+        .vitamin-d-cover {
+
+            position: relative;
+
+            flex-direction: column;
+
+            gap: 12px;
+        }
+
         .vitamin-d-cover::before {
+
             content: "";
+
             position: absolute;
+
             width: 165px;
             height: 165px;
+
             border-radius: 50%;
-            background: rgba(255, 193, 7, 0.18);
+
+            background:
+                rgba(255, 193, 7, 0.18);
         }
 
         .vitamin-d-icon {
+
             position: relative;
+
             z-index: 2;
+
             font-size: 5rem;
+
             line-height: 1;
         }
 
         .vitamin-d-label {
+
             position: relative;
+
             z-index: 2;
+
             color: var(--text-dark);
+
             font-size: 1rem;
+
             font-weight: 800;
+
             letter-spacing: 0.06em;
+
             text-transform: uppercase;
         }
 
+
+        /* =========================
+           HbA1c COVER
+        ========================= */
+
+        .hba1c-cover {
+
+            position: relative;
+
+            flex-direction: column;
+
+            gap: 12px;
+        }
+
+        .hba1c-icon {
+
+            position: relative;
+
+            z-index: 2;
+
+            font-size: 5rem;
+
+            line-height: 1;
+        }
+
+        .hba1c-label {
+
+            position: relative;
+
+            z-index: 2;
+
+            color: var(--text-dark);
+
+            font-size: 1rem;
+
+            font-weight: 800;
+
+            letter-spacing: 0.06em;
+
+            text-transform: uppercase;
+        }
+
+
+        /* =========================
+           CHOLESTEROL COVER
+        ========================= */
+
+        .cholesterol-cover {
+
+            position: relative;
+
+            width: 100%;
+
+            height: 260px;
+
+            padding: 25px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 14px;
+
+            text-align: center;
+
+            overflow: hidden;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #e5f5f3,
+                    #edf3f5
+                );
+        }
+
+        .cholesterol-icon {
+
+            display: block;
+
+            font-size: 4.5rem;
+
+            line-height: 1;
+
+            flex-shrink: 0;
+        }
+
+        .cholesterol-label {
+
+            display: block;
+
+            width: 100%;
+
+            max-width: 100%;
+
+            color: var(--text-dark);
+
+            font-size: 1rem;
+
+            font-weight: 800;
+
+            letter-spacing: 0.05em;
+
+            text-transform: uppercase;
+
+            text-align: center;
+
+            white-space: normal;
+
+            overflow-wrap: anywhere;
+        }
+
+
+        /* =========================
+           CARD CONTENT
+        ========================= */
+
         .card-content {
+
             padding: 26px;
         }
 
         .category {
+
             display: inline-block;
+
             background: #e5f6f4;
+
             color: var(--primary-dark);
+
             padding: 7px 11px;
+
             border-radius: 999px;
+
             font-size: 0.76rem;
+
             font-weight: 800;
+
             text-transform: uppercase;
+
             letter-spacing: 0.05em;
+
             margin-bottom: 15px;
         }
 
         .card-content h3 {
+
             margin: 0;
+
             font-size: 1.5rem;
+
             line-height: 1.3;
+
             color: var(--text-dark);
         }
 
         .card-content p {
+
             margin: 14px 0 22px;
+
             color: var(--text-medium);
+
             line-height: 1.7;
         }
 
         .card-button {
+
             display: inline-block;
+
             background: var(--primary);
+
             color: white;
+
             padding: 12px 18px;
+
             border-radius: 9px;
+
             text-decoration: none;
+
             font-weight: 800;
+
             transition: background 0.2s ease;
         }
 
         .card-button:hover {
+
             background: var(--primary-dark);
         }
 
-        .coming-soon-button {
-            display: inline-block;
-            background: #e9eef0;
-            color: #71828a;
-            padding: 12px 18px;
-            border-radius: 9px;
-            font-weight: 800;
-        }
 
-        /* About section */
+        /* =========================
+           ABOUT
+        ========================= */
 
         .about {
+
             margin-top: 70px;
+
             display: grid;
+
             grid-template-columns: 1fr 1fr;
+
             gap: 32px;
+
             align-items: center;
+
             background: var(--surface);
+
             border: 1px solid var(--border);
+
             border-radius: 22px;
+
             padding: 42px;
-            box-shadow: 0 10px 30px rgba(27, 69, 80, 0.07);
+
+            box-shadow:
+                0 10px 30px rgba(27, 69, 80, 0.07);
         }
 
         .about-logo-area {
+
             min-height: 260px;
+
             border-radius: 18px;
+
             background:
                 linear-gradient(
                     135deg,
                     #e7f7f5,
                     #edf3f5
                 );
+
             display: flex;
+
             align-items: center;
+
             justify-content: center;
+
             padding: 35px;
         }
 
         .about-logo {
+
             width: min(260px, 80%);
+
             height: auto;
+
             object-fit: contain;
         }
 
         .about h2 {
+
             margin: 0 0 14px;
+
             font-size: 2rem;
+
             color: var(--text-dark);
         }
 
         .about p {
+
             margin: 0;
+
             color: var(--text-medium);
+
             line-height: 1.8;
         }
 
-        /* Footer */
+
+        /* =========================
+           FOOTER
+        ========================= */
 
         footer {
+
             background: #113f4e;
+
             color: white;
+
             padding: 42px 24px;
+
             margin-top: 80px;
         }
 
         .footer-inner {
+
             max-width: 900px;
+
             margin: auto;
+
             text-align: center;
         }
 
         .footer-brand {
+
             display: flex;
+
             justify-content: center;
+
             align-items: center;
+
             gap: 10px;
+
             font-weight: 800;
+
             margin-bottom: 16px;
         }
 
         .footer-logo {
+
             width: 34px;
+
             height: 34px;
+
             object-fit: contain;
         }
 
         .footer-inner p {
+
             margin: 8px 0;
+
             line-height: 1.6;
         }
 
         .disclaimer {
+
             color: rgba(255, 255, 255, 0.73);
+
             font-size: 0.88rem;
+
             max-width: 780px;
+
             margin: 15px auto 0;
         }
 
-        /* Responsive layout */
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
 
         @media (max-width: 760px) {
+
             .navbar-inner {
                 min-height: 68px;
             }
@@ -467,84 +773,89 @@
             }
 
             .about {
+
                 grid-template-columns: 1fr;
+
                 padding: 28px;
             }
 
             .about-logo-area {
+
                 min-height: 210px;
             }
 
-            .newsletter-image,
             .placeholder-image {
+
                 height: 220px;
+            }
+
+            .cholesterol-cover {
+
+                height: 220px;
+
+                padding: 20px;
+            }
+
+            .cholesterol-icon {
+
+                font-size: 3.7rem;
+            }
+
+            .cholesterol-label {
+
+                font-size: 0.95rem;
             }
         }
 
+
         @media (max-width: 480px) {
+
             .brand-logo {
+
                 width: 40px;
+
                 height: 40px;
             }
 
             .brand-name {
+
                 font-size: 0.96rem;
             }
 
             .nav-links {
+
                 gap: 12px;
             }
 
             .hero h1 {
+
                 font-size: 2.3rem;
             }
 
-            .vitamin-d-cover {
-            position: relative;
-            flex-direction: column;
-            gap: 12px;
-            overflow: hidden;
-        }
+            .card-content {
 
-        .vitamin-d-cover::before {
-            content: "";
-            position: absolute;
-            width: 165px;
-            height: 165px;
-            border-radius: 50%;
-            background: rgba(255, 193, 7, 0.18);
-        }
-
-        .vitamin-d-icon {
-            position: relative;
-            z-index: 2;
-            font-size: 5rem;
-            line-height: 1;
-        }
-
-        .vitamin-d-label {
-            position: relative;
-            z-index: 2;
-            color: var(--text-dark);
-            font-size: 1rem;
-            font-weight: 800;
-            letter-spacing: 0.06em;
-            text-transform: uppercase;
-        }
-
-        .card-content {
                 padding: 22px;
             }
         }
+
     </style>
+
 </head>
+
 
 <body>
 
+
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+
     <nav class="navbar">
+
         <div class="navbar-inner">
 
             <a class="brand" href="index.html">
+
                 <img
                     class="brand-logo"
                     src="images/phoenix-logo.png"
@@ -552,6 +863,7 @@
                 >
 
                 <span class="brand-text">
+
                     <span class="brand-name">
                         Phoenix AI Health Insights
                     </span>
@@ -559,18 +871,35 @@
                     <span class="brand-subtitle">
                         Evidence-based health education
                     </span>
+
                 </span>
+
             </a>
 
+
             <div class="nav-links">
-                <a href="#newsletters">Newsletters</a>
-                <a href="#about">About</a>
+
+                <a href="#newsletters">
+                    Newsletters
+                </a>
+
+                <a href="#about">
+                    About
+                </a>
+
             </div>
 
         </div>
+
     </nav>
 
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
     <header class="hero">
+
         <div class="hero-content">
 
             <span class="hero-badge">
@@ -586,48 +915,78 @@
                 laboratory results, nutrition, preventive health, and wellness.
             </p>
 
-            <a class="hero-button" href="#newsletters">
+            <a
+                class="hero-button"
+                href="#newsletters"
+            >
                 Explore newsletters
             </a>
 
         </div>
+
     </header>
+
+
+    <!-- =========================
+         MAIN
+    ========================== -->
 
     <main>
 
+
+        <!-- NEWSLETTERS -->
+
         <section id="newsletters">
 
+
             <div class="section-header">
+
                 <div class="section-kicker">
                     Health education
                 </div>
 
-                <h2>Latest newsletters</h2>
+                <h2>
+                    Latest newsletters
+                </h2>
 
                 <p>
-                    Browse educational resources designed to simplify complex
-                    health and laboratory topics.
+                    Browse educational resources designed to simplify
+                    complex health and laboratory topics.
                 </p>
+
             </div>
 
+
             <div class="newsletter-grid">
+
+
+                <!-- =====================
+                     VITAMIN D
+                ====================== -->
 
                 <article class="newsletter-card">
 
                     <div class="placeholder-image vitamin-d-cover">
-                        <span class="vitamin-d-icon" role="img" aria-label="Sun">
+
+                        <span
+                            class="vitamin-d-icon"
+                            role="img"
+                            aria-label="Sun"
+                        >
                             ☀️
                         </span>
 
                         <span class="vitamin-d-label">
                             Vitamin D
                         </span>
+
                     </div>
+
 
                     <div class="card-content">
 
                         <span class="category">
-                            Biomarker spotlight
+                            Biomarker Spotlight
                         </span>
 
                         <h3>
@@ -644,17 +1003,22 @@
                             class="card-button"
                             href="vitamin-d.html"
                         >
-                            Read newsletter →
+                            Read Newsletter →
                         </a>
 
                     </div>
 
                 </article>
 
+
+                <!-- =====================
+                     HbA1c
+                ====================== -->
+
                 <article class="newsletter-card">
-                
+
                     <div class="placeholder-image hba1c-cover">
-                
+
                         <span
                             class="hba1c-icon"
                             role="img"
@@ -662,83 +1026,106 @@
                         >
                             🩸
                         </span>
-                
+
                         <span class="hba1c-label">
                             HbA1c
                         </span>
-                
+
                     </div>
-                
+
+
                     <div class="card-content">
-                
+
                         <span class="category">
                             Biomarker Spotlight
                         </span>
-                
+
                         <h3>
                             Understanding HbA1c: Your Blood Sugar Report Card
                         </h3>
-                
+
                         <p>
-                            Learn what HbA1c measures, what your results mean, and how this
-                            simple blood test reflects your average blood sugar over the past
-                            2–3 months.
+                            Learn what HbA1c measures, what your results mean,
+                            and how this simple blood test reflects your average
+                            blood sugar over the past 2–3 months.
                         </p>
-                
+
                         <a
                             class="card-button"
                             href="hba1c.html"
                         >
                             Read Newsletter →
                         </a>
-                
+
                     </div>
-                
+
                 </article>
+
+
+                <!-- =====================
+                     CHOLESTEROL
+                ====================== -->
+
                 <article class="newsletter-card">
-                
-                    <div class="placeholder-image cholesterol-cover">
-                        <span class="cholesterol-icon" role="img" aria-label="Heart">
+
+                    <div class="cholesterol-cover">
+
+                        <span
+                            class="cholesterol-icon"
+                            role="img"
+                            aria-label="Heart"
+                        >
                             ❤️
                         </span>
-                
+
                         <span class="cholesterol-label">
                             Cholesterol
                         </span>
+
                     </div>
-                
+
+
                     <div class="card-content">
-                
+
                         <span class="category">
                             Biomarker Spotlight
                         </span>
-                
+
                         <h3>
                             Understanding Cholesterol & Heart Health
                         </h3>
-                
+
                         <p>
-                            Learn about LDL, HDL, triglycerides, what a lipid panel
-                            measures, and how cholesterol levels relate to
-                            cardiovascular health.
+                            Learn about LDL, HDL, triglycerides, what a
+                            lipid panel measures, and how cholesterol
+                            levels relate to cardiovascular health.
                         </p>
-                
+
                         <a
                             class="card-button"
                             href="cholesterol.html"
                         >
                             Read Newsletter →
                         </a>
-                
+
                     </div>
 
                 </article>
+
 
             </div>
 
         </section>
 
-        <section class="about" id="about">
+
+        <!-- =========================
+             ABOUT
+        ========================== -->
+
+        <section
+            class="about"
+            id="about"
+        >
 
             <div class="about-logo-area">
 
@@ -750,13 +1137,16 @@
 
             </div>
 
+
             <div>
 
                 <div class="section-kicker">
                     About the library
                 </div>
 
-                <h2>About Phoenix AI Health Insights</h2>
+                <h2>
+                    About Phoenix AI Health Insights
+                </h2>
 
                 <p>
                     Phoenix AI Health Insights is an educational newsletter
@@ -771,9 +1161,16 @@
 
         </section>
 
+
     </main>
 
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
     <footer>
+
         <div class="footer-inner">
 
             <div class="footer-brand">
@@ -784,24 +1181,33 @@
                     alt=""
                 >
 
-                <span>Phoenix AI Health Insights</span>
+                <span>
+                    Phoenix AI Health Insights
+                </span>
 
             </div>
+
 
             <p>
                 © 2026 Phoenix AI. All rights reserved.
             </p>
 
+
             <p class="disclaimer">
+
                 This content is provided for general educational purposes only
                 and is not a substitute for professional medical advice,
                 diagnosis, or treatment. Always consult a qualified healthcare
                 professional regarding personal laboratory results or health
                 concerns.
+
             </p>
 
         </div>
+
     </footer>
 
+
 </body>
+
 </html>
