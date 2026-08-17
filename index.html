@@ -424,6 +424,66 @@
 
 
         /* =========================
+           FERRITIN COVER
+        ========================= */
+
+        .ferritin-cover {
+            position: relative;
+            width: 100%;
+            height: 260px;
+            padding: 25px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            gap: 14px;
+
+            text-align: center;
+            overflow: hidden;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #f8edef,
+                    #edf3f5
+                );
+        }
+
+        .ferritin-cover::before {
+            content: "";
+            position: absolute;
+            width: 165px;
+            height: 165px;
+            border-radius: 50%;
+            background: rgba(143, 45, 63, 0.12);
+        }
+
+        .ferritin-icon {
+            position: relative;
+            z-index: 2;
+            display: block;
+            font-size: 4.5rem;
+            line-height: 1;
+            flex-shrink: 0;
+        }
+
+        .ferritin-label {
+            position: relative;
+            z-index: 2;
+            display: block;
+            width: 100%;
+            color: #8f2d3f;
+            font-size: 1rem;
+            font-weight: 800;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+
+        /* =========================
            CARD CONTENT
         ========================= */
 
@@ -678,12 +738,14 @@
                 height: 220px;
             }
 
-            .cholesterol-cover {
+            .cholesterol-cover,
+            .ferritin-cover {
                 height: 220px;
                 padding: 20px;
             }
 
-            .cholesterol-icon {
+            .cholesterol-icon,
+            .ferritin-icon {
                 font-size: 3.7rem;
             }
         }
@@ -907,7 +969,9 @@
             <div class="newsletter-grid">
 
 
-                <!-- VITAMIN D -->
+                <!-- =====================
+                     VITAMIN D
+                ====================== -->
 
                 <article class="newsletter-card">
 
@@ -956,7 +1020,9 @@
                 </article>
 
 
-                <!-- HBA1C -->
+                <!-- =====================
+                     HBA1C
+                ====================== -->
 
                 <article class="newsletter-card">
 
@@ -1005,7 +1071,9 @@
                 </article>
 
 
-                <!-- CHOLESTEROL -->
+                <!-- =====================
+                     CHOLESTEROL
+                ====================== -->
 
                 <article class="newsletter-card">
 
@@ -1045,6 +1113,58 @@
                         <a
                             class="card-button"
                             href="cholesterol.html"
+                        >
+                            Read Newsletter →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- =====================
+                     FERRITIN
+                ====================== -->
+
+                <article class="newsletter-card">
+
+                    <div class="ferritin-cover">
+
+                        <span
+                            class="ferritin-icon"
+                            role="img"
+                            aria-label="Blood drop"
+                        >
+                            🩸
+                        </span>
+
+                        <span class="ferritin-label">
+                            Ferritin
+                        </span>
+
+                    </div>
+
+
+                    <div class="card-content">
+
+                        <span class="category">
+                            Biomarker Spotlight
+                        </span>
+
+                        <h3>
+                            Ferritin: More Than Just Iron
+                        </h3>
+
+                        <p>
+                            Learn what ferritin tells us about the body's
+                            iron stores, what low or elevated levels may
+                            indicate, and why inflammation can influence
+                            ferritin results.
+                        </p>
+
+                        <a
+                            class="card-button"
+                            href="ferritin.html"
                         >
                             Read Newsletter →
                         </a>
