@@ -484,6 +484,62 @@
 
 
         /* =========================
+           TESTOSTERONE COVER
+        ========================= */
+
+        .testosterone-cover {
+            position: relative;
+            width: 100%;
+            height: 260px;
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 14px;
+            text-align: center;
+            overflow: hidden;
+            background:
+                linear-gradient(
+                    135deg,
+                    #eaf0fa,
+                    #edf3f5
+                );
+        }
+
+        .testosterone-cover::before {
+            content: "";
+            position: absolute;
+            width: 165px;
+            height: 165px;
+            border-radius: 50%;
+            background: rgba(36, 59, 107, 0.12);
+        }
+
+        .testosterone-icon {
+            position: relative;
+            z-index: 2;
+            display: block;
+            font-size: 4.5rem;
+            line-height: 1;
+            flex-shrink: 0;
+        }
+
+        .testosterone-label {
+            position: relative;
+            z-index: 2;
+            display: block;
+            width: 100%;
+            color: #243b6b;
+            font-size: 1rem;
+            font-weight: 800;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+
+        /* =========================
            CARD CONTENT
         ========================= */
 
@@ -739,13 +795,15 @@
             }
 
             .cholesterol-cover,
-            .ferritin-cover {
+            .ferritin-cover,
+            .testosterone-cover {
                 height: 220px;
                 padding: 20px;
             }
 
             .cholesterol-icon,
-            .ferritin-icon {
+            .ferritin-icon,
+            .testosterone-icon {
                 font-size: 3.7rem;
             }
         }
@@ -1165,6 +1223,56 @@
                         <a
                             class="card-button"
                             href="ferritin.html"
+                        >
+                            Read Newsletter →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- =====================
+                     TESTOSTERONE
+                ====================== -->
+
+                <article class="newsletter-card">
+
+                    <div class="testosterone-cover">
+
+                        <span
+                            class="testosterone-icon"
+                            role="img"
+                            aria-label="Hormone and strength"
+                        >
+                            🧬
+                        </span>
+
+                        <span class="testosterone-label">
+                            Testosterone
+                        </span>
+
+                    </div>
+
+
+                    <div class="card-content">
+
+                        <span class="category">
+                            Hormonal Health
+                        </span>
+
+                        <h3>
+                            Testosterone: More Than a “Male Hormone”
+                        </h3>
+
+                        <p>
+                            Learn how testosterone relates to body composition,
+                            muscle, bone health, metabolism, and SHBG.
+                        </p>
+
+                        <a
+                            class="card-button"
+                            href="testosterone.html"
                         >
                             Read Newsletter →
                         </a>
